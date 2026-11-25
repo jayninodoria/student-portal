@@ -1,0 +1,309 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #263248;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 245px;
+    background: #172554;
+    color: white;
+    padding: 28px 18px;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 38px;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.sidebar h4 {
+    font-size: 11px;
+    color: #94a3b8;
+    margin: 20px 10px 12px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 9px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #2563eb;
+    color: white;
+}
+
+.main {
+    margin-left: 245px;
+    padding: 30px;
+    width: calc(100% - 245px);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.topbar h2 {
+    font-size: 25px;
+}
+
+.profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #dbeafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.profile-mini p {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.welcome {
+    background: linear-gradient(120deg, #2563eb, #172554);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.welcome h1 {
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.welcome p {
+    color: #dbeafe;
+    line-height: 1.6;
+}
+
+#currentDate {
+    margin-top: 12px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.04);
+}
+
+.card .icon {
+    font-size: 26px;
+    margin-bottom: 13px;
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 6px;
+    color: #172554;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.section {
+    background: white;
+    padding: 23px;
+    border-radius: 13px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 15px rgba(0,0,0,.04);
+}
+
+.section h2 {
+    margin-bottom: 18px;
+    font-size: 19px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+th {
+    color: #64748b;
+    background: #f8fafc;
+}
+
+.status {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.announcement {
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement:last-child {
+    border: none;
+}
+
+.announcement h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.announcement p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.grade {
+    font-weight: bold;
+    color: #15803d;
+}
+
+.profile-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.profile-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #dbeafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.info {
+    padding: 13px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.info strong {
+    display: inline-block;
+    width: 150px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+@media(max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+    .topbar h2 {
+        font-size: 19px;
+    }
+
+    .welcome h1 {
+        font-size: 22px;
+    }
+
+    .section {
+        overflow-x: auto;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}
